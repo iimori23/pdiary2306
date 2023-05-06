@@ -1,0 +1,40 @@
+<div id="<%= dom_id idea %>" class="row">
+  <!-- p144 -->
+  <div class="col-md-6 my-3">
+    <%= image_tag(idea.picture_url, width: '100%') if idea.picture.present? %>
+  </div>
+
+  <div class="col-md-6 my-3">
+  <p>
+    <!-- <strong>Title:</strong> -->
+    <h1>
+    <%= idea.title %>
+    </h1>
+  </p>
+
+  <p>
+    <!-- <strong>Pulished at:</strong> -->
+    <time class="badge rounded-pill bg-info text-dark">
+    <%= idea.pulished_at %>
+    </time>
+  </p>
+
+  <p class="my-4">
+    <strong>Description:</strong>
+    <%= idea.description %>
+  </p>
+
+  <% 
+=begin 
+%>
+  <p>
+    <strong>Picture:</strong>
+    <%= image_tag(idea.picture_url, width: '400px') if idea.picture.present? %>
+  </p>
+  <% 
+=end 
+%>
+
+  </div>
+
+</div>
